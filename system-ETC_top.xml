@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 19 -->
+<RESOURCE screen_w="640" screen_h="480" version="1.1" xmlns="http://www.scei.co.jp/bn/2002/">
+  <SCRIPT id="main" src="top" type="binary/small"/>
+  <SCRIPT id="top_list" src="top_list" type="binary/small"/>
+  <SCRIPT id="top_item" src="top_item" type="binary/small"/>
+  <SCRIPT id="top_camera" src="top_camera" type="binary/small"/>
+  <SCRIPT id="focus" src="parts/focus" type="binary/small"/>
+  <SCRIPT id="scroll_bar" src="parts/scroll_bar" type="binary/small"/>
+  <LINK id="bg" href="common/bg.xml" />
+  <LINK id="link_sysupdate" href="utility/sysupdate.xml" />
+  <LINK id="script_cdplayer"  href="music/music_player.xml" type="binary/small" />
+  <LINK id="script_dvdplayer"  href="music/music_player.xml" type="binary/small" />
+  <LINK id="script_gameplayer"  href="music/music_player.xml" type="binary/small" />
+  <LINK id="script_discpage"  href="system/psbbdisc.xml" type="binary/small" />
+  <IMG id="tex_crystal0" src="texture/crystal1.tm2" />
+  <IMG id="tex_crystal1" src="texture/crystal2.tm2" />
+  <IMG id="tex_crystal2" src="texture/crystal3.tm2" />
+  <IMG id="tex_crystal3" src="texture/crystal4.tm2" />
+  <IMG id="channel_glowup" src="texture/glowup.tm2" />
+  <MENUGROUP id="GROUP-TOPLOGO" menutype="icon" order="center" bgm="enable" mediadetect="false">
+    <ITEM id="BNCH-PSBB" icon="file:/opt0/bn/script/texture/psbb256.tm2" link="subgroup" subgroup="GROUP-TOPMENU" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TOPMENU" menutype="label" order="center" bgm="enable" mediadetect="all" retgroup="GROUP-TOPLOGO" retitem="BNCH-PSBB">
+      <TITLE id="TITLE-TOPMENU" label = "Main Menu" />
+      <ITEM id="UTILITY-TES" label="TEST me0_2" link="href" href="http://192.168.1.132/psbb.gamecity.ne.jp/index.xml" />
+      <ITEM id="UTILITY-TEST" label="TEST me" link="href" href="http://192.168.1.132/psbb.namco-ch.net/namco-ch/namco.xml" />
+      <ITEM id="UTILITY-TEST2" label="TEST me2" link="href" href="http://192.168.1.132/launcher/main.xml" />
+      <ITEM id="UTILITY-BBNUPDATE2" label="PSBBN Update" link="href" href="file:/opt0/bn/script/utility/sysupdate.xml" />
+	  <ITEM id="PSBB-GUIDE" label="PlayStation®BB Guide" link="href" href="file:/opt0/bn/script/guide/main.xml" />
+      <ITEM id="ITEM-CHANNEL" label="PlayStation®BB Channels" link="subgroup" subgroup="GROUP-CHANNEL" />
+      <ITEM id="NETCONF-TEST" label="Test Network Connection" link="href" linkargs="start=test" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="NETCONF-EDIT" label="Network Settings" link="href" linkargs="start=edit" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="PFS-WLE" label="LaunchELF" link="href" linkargs="uri=pfs:/PP.ULE" href="file:/opt0/bn/script/game/boot_game3.xml" />
+      <ITEM id="BNEXIT" label="Reboot" link="href" href="file:/opt0/bn/script/system/bn_exit.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-CHANNEL" menutype="icon" order="left" bgm="enable" mediadetect="false" retgroup="GROUP-TOPMENU" retitem="ITEM-CHANNEL" >
+      <ITEM id="BNCH-INTERNET" icon="file:/opt0/bn/script/texture/internet256.tm2" link="subgroup" subgroup="CHANNEL-INTERNET" />
+      <ITEM id="BNCH-UTILITY" icon="file:/opt0/bn/script/texture/utility256.tm2" link="subgroup" subgroup="GROUP-UTILITY" />
+      <ITEM id="BNCH-GAME" icon="file:/opt0/bn/script/texture/game256.tm2" link="subgroup" subgroup="CHANNEL-GAME" />
+      <ITEM id="BNCH-MOVIE" icon="file:/opt0/bn/script/texture/movie256.tm2" link="subgroup" subgroup="CHANNEL-MOVIE" />
+      <ITEM id="BNCH-PHOTO" icon="file:/opt0/bn/script/texture/photo256.tm2" link="subgroup" subgroup="CHANNEL-PHOTO" />
+      <ITEM id="BNCH-MUSIC" icon="file:/opt0/bn/script/texture/music256.tm2" link="subgroup" subgroup="CHANNEL-MUSIC" />
+      <ITEM id="BNCH-TEST" icon="file:/opt0/bn/script/texture/psbb256.tm2" link="subgroup" subgroup="GROUP-TEST1" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-INTERNET" menutype="label" order="left" bgm="continue" mediadetect="all" retgroup="GROUP-CHANNEL" retitem="BNCH-INTERNET" >
+      <TITLE id="TITLE-INTERNET" label = "Online Channels and Internet Settings" />
+      <ITEM id="PSBBCH-LOCAL" label="Channel collection (local)" link="href" href="http://localhost/list/main.xml" />
+      <ITEM id="PSBBCH-VITAS" label="Channel collection (by Vitas)" link="href" href="http://psbbn.ru/test/main.xml" />
+      <ITEM id="PSBBCH-AKUHAK" label="Channel collection (by AKuHAK)" link="href" href="http://akuhak2.github.io/psbbn/main.xml" />
+      <ITEM id="NETCONF-TEST2" label="Test Network Connections" link="href" linkargs="start=test" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="NETCONF-EDIT2" label="Configure Network" link="href" linkargs="start=edit" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="UTILITY-BBNUPDATE2" label="PSBBN Update" link="href" href="file:/opt0/bn/script/utility/sysupdate.xml" />
+	  <ITEM id="PSBBCH-KOEI" label="KOEI TECMO / GAMECITY (online)" link="href" href="http://psbbn.ru/psbb.gamecity.ne.jp/index.xml"/>
+      <ITEM id="PSBBCH-BBGUIDE" label="PlayStation®BB Guide (online)" link="href" href="http://psbbn.ru/bb-scej.scei.co.jp/bbguide/main.xml" />
+      <ITEM id="PSBBCH-PSNOW" label="PlayStation® Now! (online)" link="href" href="http://psbbn.ru/bb-scej.scei.co.jp/psnow/main.xml"/>
+      <ITEM id="PSBBCH-SCEJ" label="SCEJ ch. (online)" link="href" href="http://psbbn.ru/scejch.scej-online.jp/JCH/main.xml"/>
+      <ITEM id="PSBBCH-HUDSON" label="HUDSON CHANNEL (backup)" link="href" href="http://psbbn.ru/psbb.hudson.co.jp/hudson.xml"/>
+      <ITEM id="PSBBCH-EA" label="EA CHANNEL (backup)" link="href" href="http://psbbn.ru/psbb.japan.ea.com/PSBB/main/menu1.xml"/>
+      <ITEM id="PSBBCH-KONAMI" label="KONAMI CHANNEL (backup)" link="href" href="http://psbbn.ru/ch0.konami-psbb.net/ch0/konami.xml"/>
+	  <ITEM id="PSBBCH-CAPCOM" label="Capcom Channel (backup)" link="href" href="http://psbbn.ru/www.capcombb.download.2iij.net/top.xml"/>
+	  <ITEM id="PSBBCH-NAMCO" label="NAMCO (backup)" link="href" href="http://psbbn.ru/namco-ch/namco.xml"/>
+      <ITEM id="HPSBBCH-BBGUIDE" label="PlayStation®BB Guide (backup/ru)" link="href" href="http://psbbn.ru/bb-scej.scei.co.jp/bbguide/main.xml" />
+      <ITEM id="HPSBBCH-PSNOW" label="PlayStation® Now! (backup)" link="href" href="http://psbbn.ru/bb-scej.scei.co.jp/psnow/main.xml"/>
+      <ITEM id="HPSBBCH-SCEJ" label="SCEJ ch. (backup)" link="href" href="http://psbbn.ru/scejch.scej-online.jp/JCH/main.xml"/>
+      <ITEM id="PSBBCH-BANDAI" label="BANDAI World (backup)" link="href" href="http://psbbn.ru/psbb.channel.or.jp/main.xml"/>
+	  <ITEM id="HPSBBCH-KOEI" label="KOEI TECMO / GAMECITY (backup)" link="href" href="http://psbbn.ru/psbb.gamecity.ne.jp/index.xml"/>
+      <ITEM id="PSBBCH-TEST" label="Test Channel" link="href" href="http://psbbn.ru/test/main.xml"/>
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-GAME" menutype="label" order="left" bgm="disable" mediadetect="game" retgroup="GROUP-CHANNEL" retitem="BNCH-GAME" >
+      <TITLE id="TITLE-GAME" label = "Game Channel" />
+      <ITEM id="BNCH-GAME-COLLECTION" label="My Games" link="href" linkargs="mode=collection" href="file:/opt0/bn/script/game/game.xml"/>
+      <ITEM id="UTILITY-BROWSER" label="Save Manager" link="href" href="file:/opt0/bn/script/utility/browser.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-MUSIC" menutype="label" order="left" bgm="disable" mediadetect="music" retgroup="GROUP-CHANNEL" retitem="BNCH-MUSIC" >
+      <TITLE id="TITLE-MUSIC" label = "Music Channel" />
+      <ITEM id="BNCH-MUSIC-FAVORITE" label="Favorites" 	link="href" linkargs="mode=favorite" href="file:/opt0/bn/script/music/music.xml" />
+      <ITEM id="BNCH-MUSIC-COLLECTION" label="Collection" link="href" linkargs="mode=collection" href="file:/opt0/bn/script/music/music.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-MOVIE" menutype="label" order="left" bgm="disable" mediadetect="movie" retgroup="GROUP-CHANNEL" retitem="BNCH-MOVIE" >
+      <TITLE id="TITLE-MOVIE" label = "Movie Channel" />
+      <ITEM id="BNCH-MOVIE-FAVORITE" label="Favorites" link="href" linkargs="mode=favorite" href="file:/opt0/bn/script/movie/movie.xml" />
+      <ITEM id="BNCH-MOVIE-COLLECTION" label="Collection" link="href" linkargs="mode=correction" href="file:/opt0/bn/script/movie/movie.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="CHANNEL-PHOTO" menutype="label" order="left" bgm="disable" mediadetect="photo" retgroup="GROUP-CHANNEL" retitem="BNCH-PHOTO" >
+      <TITLE id="TITLE-PHOTO" label = "Photo Channel" />
+      <ITEM id="BNCH-PHOTO-FAVORITE" label="Favorites" link="href" linkargs="mode=favorite" href="file:/opt0/bn/script/photo/photo.xml" />
+      <ITEM id="BNCH-PHOTO-COLLECTION" label="Collection" link="href" linkargs="mode=correction" href="file:/opt0/bn/script/photo/photo.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-UTILITY" menutype="label" order="left" bgm="continue" mediadetect="all" retgroup="GROUP-CHANNEL" retitem="BNCH-UTILITY" >
+      <TITLE id="TITLE-UTILITY" label = "Options" />
+	  <ITEM id="PSBB-GUIDE" label="PlayStation®BB Guide" link="href" href="file:/opt0/bn/script/guide/main.xml" />
+      <ITEM id="UTILITY-SYSCONF" label="System Settings" link="href" href="file:/opt0/bn/script/utility/sysconf.xml" />
+      <ITEM id="NETCONF-TEST2" label="Test Network Connection" link="href" linkargs="start=test" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="NETCONF-EDIT2" label="Network Settings" link="href" linkargs="start=edit" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="NETCONF-EDIT4" label="Restore network settings from MC" link="href" linkargs="start=restore" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="NETCONF-EDIT5" label="Backup network settings to MC" link="href" linkargs="start=backup" href="file:/opt0/bn/script/utility/netconf.xml" />
+      <ITEM id="UTILITY-BBNUPDATE2" label="PSBBN Update" link="href" href="file:/opt0/bn/script/utility/sysupdate.xml" />
+      <ITEM id="UTILITY-BROWSER2" label="Save Manager" link="href" href="file:/opt0/bn/script/utility/browser.xml" />
+      <ITEM id="BNEXIT" label="Reboot" link="href" href="file:/opt0/bn/script/system/bn_exit.xml" />
+      <ITEM id="TEST-CHANNEL" label="Testing features (danger)" link="subgroup" subgroup="GROUP-TEST" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST" menutype="label" order="left" bgm="continue" mediadetect="false" retgroup="GROUP-UTILITY">
+      <TITLE id="TITLE-ISPCH" label="Tests" />
+      <ITEM id="NETCONF-INTERNET" data="here" label="Internet (test)" link="href" href="file:/opt0/bn/script/communication/communication.xml" />
+      <ITEM id="BNCH-DIRECTURL" data="here" label="Enter URL (test)" link="href" href="file:/opt0/bn/script/sample/kick.xml" />
+      <ITEM id="NETCONF-INTERNET2" label="Internet (test)2" link="href" href="file:/opt0/bn/script/communication/communication.xml" />
+      <ITEM id="INIT-TEST" label="INIT" link="href" linkargs="mode=START" href="file:/opt0/bn/script/utility/init_setup.xml" />
+      <ITEM id="INIT-TEST2" label="INIT2" link="href" href="file:/opt0/bn/script/utility/init_setup.xml" />
+      <ITEM id="BNCH-DIRECTURL2" label="Enter URL (test)2" link="href" href="file:/opt0/bn/script/sample/kick.xml" />
+      <ITEM id="PSBBCH-LOCAL2" label="Channel collection (local2)" link="href" href="file:/home/httpd/html/test/main.xml" />
+      <ITEM id="TEST-GAME1" label="uri=pfs:/PP.POPS/TEST.ELF NG" link="href" linkargs="uri=pfs:/PP.POPS/TEST.ELF" href="file:/opt0/bn/script/game/boot_game3.xml" />
+      <ITEM id="TEST-GAME2" label="uri=pfs:/PP.ULE WORKS!!" link="href" linkargs="uri=pfs:/PP.ULE" href="file:/opt0/bn/script/game/boot_game3.xml" />
+      <ITEM id="NETCONF-ISP" label="isp" link="href" href="file:/opt0/bn/script/utility/ispconf.xml" />
+      <ITEM id="BNCH-MAIL" label="Mail Client" link="href" href="file:/opt0/bn/script/mailer/main.xml" />
+      <ITEM id="BNCH-FEEGA" label="Feega" link="href" href="file:/opt0/bn/script/edclient/member_menu.xml" />
+      <ITEM id="PS2INIT" label="Initialise TimeZone" link="href" href="file:/opt0/bn/script/utility/ps2init.xml" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST1" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-CHANNEL" retitem="BNCH-TEST" >
+      <ITEM id="ICO-TEST1" icon="texture/PSP/NBB_icon.tm2" link="subgroup" subgroup="GROUP-TEST2" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST2" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST1" retitem="ICO-TEST1" >
+      <ITEM id="ICO-TEST2" icon="texture/PSP/SCN_icon.tm2" link="subgroup" subgroup="GROUP-TEST3" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST3" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST2" retitem="ICO-TEST2" >
+      <ITEM id="ICO-TEST3" icon="texture/PSP/YBB_icon.tm2" link="subgroup" subgroup="GROUP-TEST4" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST4" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST3" retitem="ICO-TEST3" >
+      <ITEM id="ICO-TEST4" icon="texture/PSP/USN_icon.tm2" link="subgroup" subgroup="GROUP-TEST5" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST5" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST4" retitem="ICO-TEST4" >
+      <ITEM id="ICO-TEST5" icon="texture/PSP/AII_icon.tm2" link="subgroup" subgroup="GROUP-TEST6" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST6" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST5" retitem="ICO-TEST5" >
+      <ITEM id="ICO-TEST6" icon="texture/PSP/OCN_icon.tm2" link="subgroup" subgroup="GROUP-TEST7" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST7" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST6" retitem="ICO-TEST6" >
+      <ITEM id="ICO-TEST7" icon="texture/PSP/BGL_icon.tm2" link="subgroup" subgroup="GROUP-TEST8" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST8" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST7" retitem="ICO-TEST7" >
+      <ITEM id="ICO-TEST8" icon="texture/PSP/NFT_icon.tm2" link="subgroup" subgroup="GROUP-TEST9" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST9" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST7" retitem="ICO-TEST8" >
+      <ITEM id="ICO-TEST9" icon="texture/PSP/PLL_icon.tm2" link="subgroup" subgroup="GROUP-TEST10" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST10" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST7" retitem="ICO-TEST9" >
+      <ITEM id="ICO-TEST10" icon="texture/PSP/ISO_icon.tm2" link="subgroup" subgroup="GROUP-TEST11" />
+  </MENUGROUP>
+  <MENUGROUP id="GROUP-TEST11" menutype="icon" order="center" bgm="continue" mediadetect="false" retgroup="GROUP-TEST7" retitem="ICO-TEST10" >
+      <ITEM id="ICO-TEST11" icon="texture/PSP/ETC_icon.tm2" link="subgroup" subgroup="GROUP-CHANNEL" />
+  </MENUGROUP>
+</RESOURCE>
